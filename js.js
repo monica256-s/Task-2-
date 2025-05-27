@@ -32,7 +32,7 @@ function loadTodo(){
 
 //event listener for input to add new todo to the list.
 input.addEventListener("keypress",function(keyPressed){
-  if(keyPressed.which === enter ){
+  if(keyPressed.which === 13){
     //creating lists and span when enter is clicked
     var li = document.createElement("li");
     var spanElement = document.createElement("span");
