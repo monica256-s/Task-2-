@@ -15,7 +15,7 @@ var overlay = document.getElementById("overlay")
 //function to delete todo if delete span is clicked.
 function deleteTodo(){
   for(let span of spans){
-    span.addEventListener ("click",function (){
+    span.addEventListener ("click",function (event){
       span.parentElement.remove();
       event.stopPropagation();
     });
@@ -39,7 +39,7 @@ input.addEventListener("keypress",function(keyPressed){
     var icon = document.createElement("i");
         
     var newTodo = this.value;
-    this.value = " " ;
+    this.value = "" ;
         
     icon.classList.add('fas', 'fa-trash-alt');
     spanElement.append(icon);
@@ -68,7 +68,7 @@ pencil.addEventListener('click', function(){
 
 //save todolist state so user can access it later
 saveBtn.addEventListener('click',function(){
-  localStorage.setItem('todoList',ul.innerHTML );
+  localStorage.setItem('todoList' );
   
 });
 
@@ -85,7 +85,7 @@ tipsBtn.addEventListener("click",function(){
 
 //close overlay when close btn is clicked
 closeBtn.addEventListener("click",function(e){
-  e.preventDefault;
+  e.preventDefault();
   overlay.style.height = "0";
   
 })
