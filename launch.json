@@ -1,6 +1,5 @@
 //selecting dom elements for manipulation
 var input = document.querySelector("input[type = 'text']");
-var desiredInput = inputs[0];
 var ul = document.querySelector("ul");
 var container = document.querySelector("div");
 var lists = document.querySelectorAll("li");
@@ -86,7 +85,7 @@ tipsBtn.addEventListener("click",function(){
 
 //close overlay when close btn is clicked
 closeBtn.addEventListener("click",function(e){
-  e.preventDefault();
+  e.preventDefault;
   overlay.style.height = "0";
   
 })
